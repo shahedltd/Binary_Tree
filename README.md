@@ -31,3 +31,26 @@ Learning Tool: Great for understanding binary tree structure and recursive trave
 Algorithm Building Block: Useful for exploring more complex tree-based algorithms (e.g., binary search trees, AVL trees).
 # Contributing
 Contributions, issues, and feature requests are welcome! Feel free to fork this repository and submit a pull request.
+# CODE:
+class Node:
+    def __init__(self, data):
+        self.left = None
+        self.right = None
+        self.data = data
+
+    def left_side(self):
+        self.left = Node(self.data - 1)
+
+    def right_side(self):
+        self.right =  Node(self.data+ 1)
+    def show(self):
+        if self.left:
+            self.left.show()
+        print(self.data)
+        if self.right:
+            self.right.show()
+
+root = Node(100)
+root.left_side()
+root.right_side()
+root.show()
